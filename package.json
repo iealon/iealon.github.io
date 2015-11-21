@@ -1,0 +1,26 @@
+{
+  "name": "iealon.github.io",
+  "version": "0.0.1",
+  "keywords": "loganxie@github.com,iealon@github.com",
+  "description": "iealon@github.io",
+  "author": "loganxie@tencent",
+  "respository": {
+    "type": "git",
+    "url": "https://github.com/iealon/iealon.github.io.git"
+  },
+  "licenses": "MIT",
+  "bugs": {
+    "email": "loganxie@tencent.com"
+  },
+  "contributors": [
+    {
+      "name": "loganxie",
+      "email": "loganxie@tencent.com"
+    }
+  ],
+  "private": "true",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^2.1.0"
+  }
+}

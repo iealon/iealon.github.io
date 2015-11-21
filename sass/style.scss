@@ -1,0 +1,237 @@
+/*----------------------------*\
+filename: style.scss
+author  : loganxie
+email  	: loganxie@tencent.com
+create  : 	
+加油少年！GO！GO！GO！
+\*----------------------------*/
+
+
+/*定义常量*/
+
+$mainColor:#09c;
+$focusColor:#9C3;
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url(../fonts/Nunito-Bold.ttf) format('truetype');
+}
+
+@mixin left {
+    float: left;
+    margin-left: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    vertical-align: bottom;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Nunito-Bold, Microsoft YaHei;
+    font-size: 66.7%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a,
+// a:hover,
+a:link,
+a:visited {
+    transition: 1s;
+    text-decoration: none;
+}
+
+@keyframes breathing {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes breathing
+/* Firefox */
+
+{
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes breathing
+/* Safari 和 Chrome */
+
+{
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes breathing
+/* Opera */
+
+{
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.container {
+    height: 100%;
+    font-size: 1.3rem;
+    .mid-icon {
+        left: 70%;
+        margin-left: -4.5rem;
+        width: 9rem;
+        height: 9rem;
+        top: 15rem;
+        position: absolute;
+        z-index: 9;
+        border-radius: 100%;
+        overflow: hidden;
+        transition: 1s;
+        //    -webkit-animation: breathing 5s ease-out infinite normal;
+        // animation: breathing 5s ease-out infinite normal;
+        img {
+            height: 9rem;
+        }
+        @media screen and(max-width:600px){
+        	left:50%;
+        	width:6rem;
+        	height:6rem;
+        	margin-left:-3rem;
+        	img{
+        		height:6rem;
+        	}
+        }
+    }
+    .panel {
+        padding: 1.5rem;
+        position: absolute;
+        height: 100%;
+        transition: 1s;
+        .desc {
+            height: 15rem;
+        }
+        h3 {
+            font-size: 2.5rem;
+        }
+        h4 {
+            font-size: 2.1rem;
+            padding-top: 2rem;
+        }
+        ul {
+            margin-top: 9rem;
+            li {
+                margin-top: 0.8rem;
+            }
+        }
+    }
+    .panel-left {
+        width: 70%;
+        text-align: right;
+        background-color: $mainColor;
+        color: #FFF;
+        a, // a:hover,
+        a:link,
+        a:visited {
+            color: #FFF;
+        }
+        a:hover {
+            color: #F66;
+        }
+        @media(max-width:600px) {
+            width: 50%;
+        }
+    }
+    .panel,
+    .panel-left:hover {
+        background-color: #FFF;
+        color: $mainColor;
+        a, // a:hover,
+        a:link,
+        a:visited {
+            color: $mainColor;
+        }
+        a:hover {
+            color: $focusColor;
+        }
+    }
+    .panel,
+    .panel-left:hover+.panel-right {
+        background-color: $mainColor;
+        color: #FFF;
+        a,
+        a:link,
+        a:visited {
+            color: #FFF;
+        }
+        a:hover {
+            color: $focusColor;
+        }
+    }
+    .panel-right {
+        width: 30%;
+        left: 70%;
+        text-align: left;
+        color: $mainColor;
+        background-color: #FFF;
+        a, // a:hover,
+        a:link,
+        a:visited {
+            color: $mainColor;
+        }
+        a:hover {
+            color: $focusColor;
+        }
+        @media screen and (max-width:600px) {
+            width: 50%;
+            left: 50%;
+        }
+    }
+    .panel-right:hover+.mod-icon{
+        transform: rotateY(180deg);
+    }
+}
