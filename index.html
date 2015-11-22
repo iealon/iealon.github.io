@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="iealon@github.io,iealon's resume,xieyuanchao,谢远超,腾讯,前端,HTML5,JS,FE" />
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
+    <div class="mask">
+      <div class="loading">
+      </div>
+    </div>
     <div class="content">
         <div class="container">
             <div class="panel panel-left">
@@ -40,6 +43,22 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+      document.getElementByClassName = function(classname){
+        var all = document.all?document.all:document.getElementsByTagName('*');
+        var elements = [];
+        for(var i=0,len = all.length;i<len;i++){
+          var ele = all[i];
+          if(ele.className.indexOf(classname) != -1){
+            elements.push(ele);
+          }
+        }
+        return elements;
+      }
+      window.onload = function(){
+          document.getElementByClassName('mask')[0].setAttribute('hidden','');
+      }
+    </script>
 </body>
 
 </html>

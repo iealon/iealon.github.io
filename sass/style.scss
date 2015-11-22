@@ -35,7 +35,29 @@ body {
     font-family: Nunito-Bold, Microsoft YaHei;
     font-size: 66.7%;
 }
-
+[hidden]{
+	display:none!important;
+}
+.loading{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:9rem;
+	height:9rem;
+	margin-left:-4.5rem;
+	margin-top:-4.5rem;
+	background:url(../images/Preloader_3.gif) no-repeat left top;
+	background-size:9rem 9rem;
+}
+.mask{
+	height:100%;
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9;
+	background-color:#FFF;
+}
 ul,
 li {
     list-style: none;
@@ -128,7 +150,7 @@ a:visited {
         height: 9rem;
         top: 15rem;
         position: absolute;
-        z-index: 9;
+        z-index: 2;
         border-radius: 100%;
         overflow: hidden;
         transition: 1s;
@@ -231,7 +253,7 @@ a:visited {
             left: 50%;
         }
     }
-    .panel-right:hover+.mod-icon{
+    .panel-right:hover+.mid-icon{
         transform: rotateY(180deg);
     }
 }
